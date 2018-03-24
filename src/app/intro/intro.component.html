@@ -1,0 +1,20 @@
+<div  *ngIf="summary">
+<div class="intro">
+<div class="name animate slideInDown">{{ summary.name }}</div>
+<div class="title animate slideInDown">{{ summary.title}}</div>
+<img class="profileImage animate scaleToLarge" src="assets/akash-pic.jpg">
+</div>
+
+<div class="introCard animate slideInUp">
+    <div class="social_links" *ngIf="socialLinks">
+        <a  *ngFor="let site of testArray" target="_blank"  [href]="socialLinks[site].href"> <i [class]="socialLinks[site].icon" href="http://www.fb.com"></i></a>
+    </div>
+    <div class="profile">
+        {{ summary.summary }}
+    </div>
+    <div class="actionButtons">
+        <a>Download CV</a>
+        <a>Contact Me</a>
+    </div>
+    </div>
+</div>
