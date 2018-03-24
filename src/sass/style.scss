@@ -1,2 +1,23 @@
 @import './variables';
 @import './mixins';
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+body{
+    background:#fafafa;
+}
+
+// Scrollbar
+::-webkit-scrollbar{
+    background:none;
+    height:5px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+    box-shadow: inset 0 0 1px black;
+  }
