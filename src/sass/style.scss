@@ -21,3 +21,48 @@ body{
     background-color: $secondary;
     box-shadow: inset 0 0 1px black;
   }
+
+//   animations
+@keyframes scaleToLarge{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.scaleToLarge{
+    animation-name:scaleToLarge;
+}
+@keyframes slideInDown{
+    from{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.slideInDown{
+    animation-name:slideInDown;
+}
+
+@keyframes slideInUp{
+    from{
+        transform: translateY(+50px)
+    }
+    to{
+        opacity:1;
+        transform: translateY(0px)
+    }
+}
+.slideInUp{
+    animation-name:slideInUp;
+}
+.animate{
+    animation-duration:0.5s;
+    animation-timing-function: ease-in;
+}
+.delay{
+    animation-delay:0.5s;
+}
+// end of animations
