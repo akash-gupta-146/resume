@@ -26,7 +26,6 @@ tabs:any;
     this.pages = this.page.valueChanges();
     this.pages.subscribe ( element => {
       this.tabs = element[0].pages;
-      console.log(this.tabs);
     })
   }
 

@@ -21,10 +21,26 @@
                     padding:20px 20px;
                     background:$primary;
                     color:$primaryText;
+                    display:flex;
+                    justify-content: space-between;
                 }
                 .body{
                     padding:20px 20px;
                     background:white;
+                    h4{
+                        margin:10px;
+                    }
+                    p{
+                        margin:5px 10px;
+                    }
+                    ul{
+                        margin:10px 10px 10px 25px;
+                        li{
+                            color:gray;
+                            font-weight: 100;
+                            font-size: 15px;
+                        }
+                    }
                 }
             }
             &:after{

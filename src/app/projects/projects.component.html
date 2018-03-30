@@ -1,168 +1,30 @@
-<div class="alternateBoxes">
+<div class="alternateBoxes" *ngIf="projects">
   <div class='title'>
     Projects
   </div>
   <div class="area">
-    <div class="box-area animate slideInUp">
+    <div class="box-area slideInUp" *ngFor="let project of projects">
         <div class="box">
             <div class="header">
-                Chief Project Manager
+              <div>
+                  {{project.name}}
+              </div>
+              <div>
+                <!-- <small>{{ project.date }}</small> -->
+              </div>
             </div>
             <div class="body">
               <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
+                {{ project.title }}
               </h4>
               <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+                  {{ project.description }}
               </p>
-            </div>
-          </div>
-    </div>
-
-    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>
-
-
-
-
-
-    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
-            </div>
-          </div>
-    </div>
-    <div class="box-area animate slideInUp">
-        <div class="box">
-            <div class="header">
-                Chief Project Manager
-            </div>
-            <div class="body">
-              <h4>
-                alaksj  
-              </h4>
-              <h4>
-                anam
-              </h4>
-              <p>
-                  lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-              </p>
+              <ul>
+                <li *ngFor="let point of project.points">
+                    {{ point }}
+                </li>
+              </ul>
             </div>
           </div>
     </div>
