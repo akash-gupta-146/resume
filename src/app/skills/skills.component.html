@@ -1,0 +1,61 @@
+<div class="boxes" *ngIf="skills">
+  <div class='title'>
+    Skills
+  </div>
+  <div class="container">
+    <div class="box">
+      <h5 class="title">Professional</h5>
+      <div class="values" *ngFor="let skill of skills">
+        <div *ngIf="skill.category=='professional'">
+            <div class="text">
+                <div class="name">
+                 {{ skill.title }}
+                </div>
+                <div class="value">
+                  {{ skill.value }}
+                </div>
+              </div>
+              <div class="graph">
+                <div class="progress animate" [style.width]="skill.value+'%'"></div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+        <h5 class="title">Frameworks</h5>
+        <div class="values" *ngFor="let skill of skills">
+          <div *ngIf="skill.category=='framework'">
+              <div class="text">
+                  <div class="name">
+                   {{ skill.title }}
+                  </div>
+                  <div class="value">
+                    {{ skill.value }}
+                  </div>
+                </div>
+                <div class="graph">
+                  <div class="progress animate" [style.width]="skill.value+'%'"></div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+          <h5 class="title">Other</h5>
+          <div class="values" *ngFor="let skill of skills">
+            <div *ngIf="skill.category=='other'">
+                <div class="text">
+                    <div class="name">
+                     {{ skill.title }}
+                    </div>
+                    <div class="value">
+                      {{ skill.value }}
+                    </div>
+                  </div>
+                  <div class="graph">
+                    <div class="progress animate" [style.width]="skill.value+'%'"></div>
+                  </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>

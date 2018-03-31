@@ -1,0 +1,67 @@
+@import '../../sass/_variables.scss';
+.boxes{    
+    margin-top:40px;
+    .title{
+        text-align:center;
+        font-size:26px;
+        color:$primary;
+        margin:10px;
+        text-transform:uppercase;
+    }
+    .container{
+        margin:0 10%;
+        display:flex;
+        .box{
+            background:$primary;
+            width:30%;
+            margin:0 20px;
+            padding:40px 30px 30px 30px;
+            color:$primaryText;
+            .title{
+                color:$primaryText;
+            }
+            .values{
+                display:flex;
+                flex-direction: column;
+                .text{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+            .graph{
+                position:relative;
+                height:3px;
+                background:black;
+                margin:20px 0;
+                .progress{
+                    position: absolute;
+                    left:0px;
+                    height:3px;
+                    width:0%;
+                    background:$primaryText;
+                    transition:0.3s ease-in-out;
+                    animation-name:graphValue;
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: white;
+                        right: -20px;
+                        top: -10px;
+                    }
+                }
+            }
+        }
+    }
+}
+// @keyframes graphValue{
+//     from{
+//         width:0;
+//     }
+//     to{
+//         width:initial;;
+//     }
+// }

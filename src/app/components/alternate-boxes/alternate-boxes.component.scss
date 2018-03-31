@@ -1,0 +1,93 @@
+@import '../../../sass/_variables';
+.alternateBoxes{
+    .title{
+        text-align:center;
+        font-size:26px;
+        color:$primary;
+        margin:10px;
+        text-transform:uppercase;
+    }
+    .area{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:0px;
+        .box-area{
+            width:40%;
+            position: relative;
+            .box{
+                box-shadow:0 3px 9px rgba(0, 0, 0, 0.21);
+                .header{
+                    padding:20px 20px;
+                    background:$primary;
+                    color:$primaryText;
+                    display:flex;
+                    justify-content: space-between;
+                }
+                .body{
+                    padding:20px 20px;
+                    background:white;
+                    h4{
+                        margin:10px;
+                    }
+                    p{
+                        margin:5px 10px;
+                    }
+                    ul{
+                        margin:10px 10px 10px 25px;
+                        li{
+                            color:gray;
+                            font-weight: 100;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                background: #01bcd5;
+                border-radius: 50%;
+            }
+            &:before{
+                content: '';
+                width: 0;
+                height: 0;
+                border-top: 2em solid $primary;
+                position: absolute;
+            }
+        }
+        .box-area:nth-child(odd){
+            border-right:2px solid $secondary;
+            .box{
+                margin-right: 80px;
+            }
+            &:after{
+                right:-14px;
+                top: 0;
+            }
+            &:before{
+                right: -85px;
+                top: 80px;
+                border-left: 2em solid transparent;
+            }
+        }
+        .box-area:nth-child(even){
+            .box{
+                margin-top:80px;
+                margin-left: 80px;
+            }
+            &:after{
+                left:-14px;
+                top:70px;
+            }
+            &:before{
+                left: -85px;
+                top: 0px;
+                border-right: 2em solid transparent;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, transition } from '@angular/core';
+import { Component, OnInit, transition} from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 
@@ -17,6 +17,8 @@ interface Project{
 })
 
 export class ProjectsComponent implements OnInit {
+
+  title:string = 'Projects';
 
   projectDoc: AngularFirestoreCollection<Project>
   receivedProjects: Observable<Project[]>
@@ -45,7 +47,6 @@ export class ProjectsComponent implements OnInit {
     this.receivedProjects = this.projectDoc.valueChanges();
     this.receivedProjects.subscribe(response => {
       this.projects = response;
-      console.log(response)
     })
   }
 

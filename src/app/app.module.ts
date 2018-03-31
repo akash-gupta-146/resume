@@ -8,6 +8,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { IntroComponent } from './intro/intro.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
+import { AlternateBoxesComponent } from './components/alternate-boxes/alternate-boxes.component';
+import { BoxComponent } from './skills/box/box.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCd29pcYo9q147sDlltlnWv25e7qABqk8s",
@@ -23,7 +26,10 @@ var firebaseConfig = {
     AppComponent,
     HeaderComponent,
     IntroComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    SkillsComponent,
+    AlternateBoxesComponent,
+    BoxComponent
   ],
   imports: [
     BrowserModule,
