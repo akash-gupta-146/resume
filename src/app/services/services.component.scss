@@ -3,7 +3,8 @@
 .services{
     display: grid;
     grid-template-columns: 30% 30% 30%;
-    justify-content: start;
+    justify-content: center;
+    margin:auto 5%;
     .box{
         background:white;
         padding:15px;
@@ -11,7 +12,7 @@
         box-shadow:0 0 10px lightgray;
         display:flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         text-align:center;
         color:$primary;
         i{
