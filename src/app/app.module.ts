@@ -11,6 +11,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AlternateBoxesComponent } from './components/alternate-boxes/alternate-boxes.component';
 import { BoxComponent } from './skills/box/box.component';
+import { ServicesComponent } from './services/services.component';
+import { TitleComponent } from './title/title.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCd29pcYo9q147sDlltlnWv25e7qABqk8s",
@@ -29,7 +31,9 @@ var firebaseConfig = {
     ProjectsComponent,
     SkillsComponent,
     AlternateBoxesComponent,
-    BoxComponent
+    BoxComponent,
+    ServicesComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
