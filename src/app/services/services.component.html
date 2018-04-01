@@ -1,5 +1,18 @@
 <app-title [title]="'services'"></app-title>
-services
-<div class="services">
+
+<div class="services" *ngIf="services">
+
+  <div class="box" *ngFor="let service of services">
+    <i [ngClass]="service.icon"></i>
+    <h3>{{ service.title }}</h3>
+    <p>
+      {{ service.description }}
+    </p>
+    <ul *ngFor="let point of service.points">
+      <li>
+        {{ point }}
+      </li>
+    </ul>
+  </div>
 
 </div>

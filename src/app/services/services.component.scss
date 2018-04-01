@@ -1,5 +1,35 @@
 @import '../../sass/_variables.scss';
 
 .services{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: start;
+    .box{
+        background:white;
+        padding:15px;
+        margin:20px;
+        box-shadow:0 0 10px lightgray;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align:center;
+        color:$primary;
+        i{
+            font-size:70px;
+        }
+        h3{
+            margin:15px auto;
+        }
+        ul{
+            text-align:left;
+            margin: 10px 20px 5px 20px;
+            li{
 
+            }
+        }
+    }
+    .box:nth-child(odd){
+        background:$primary;
+        color:$primaryText;
+    }
 }
