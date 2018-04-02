@@ -24,19 +24,18 @@
     }
     .selector{
         display:grid;
-        grid-template-columns: 220px 220px 220px 220px;
+        grid-template-columns: 320px 320px 320px 320px;
         justify-content: center;
         .item{
-            width:200px;
-            height:200px;
-            
+            width:300px;
+            height:300px;
             margin:10px;
             box-shadow:0 0 10px lightgray;
             transition:0.3s ease-in-out;
 
             .img {
-                width:200px;
-                height:150px;
+                width:300px;
+                height:250px;
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
@@ -56,8 +55,8 @@
                     display: none;
                 }
                 img{
-                    width:200px;
-                    height:150px;
+                    width:300px;
+                    height:250px;
                     transition: 0.5s ease-in-out;
                 }
                 &:hover{
