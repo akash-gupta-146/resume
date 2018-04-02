@@ -1,0 +1,91 @@
+@import '../../sass/_variables.scss';
+.gallary{
+    .navigator{
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style:none;
+            margin:0px;
+            padding:0px;
+            li{
+                padding:10px 20px;
+                text-align:center;
+                color:$primary;
+                cursor:pointer;
+                border-bottom: 2px solid transparent;
+                &:hover{
+                    border-bottom:2px solid $secondary;
+                }
+            }
+            .active{
+                border-bottom:2px solid $secondary;
+            }
+        }
+    }
+    .selector{
+        display:grid;
+        grid-template-columns: 220px 220px 220px 220px;
+        justify-content: center;
+        .item{
+            width:200px;
+            height:200px;
+            
+            margin:10px;
+            box-shadow:0 0 10px lightgray;
+            transition:0.3s ease-in-out;
+
+            .img {
+                width:200px;
+                height:150px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                &:after{
+                    content:'view details';
+                    padding-top:40%;
+                    color:$primaryText;
+                    text-align: center;
+                    vertical-align: middle;
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                    background:rgba(0, 0, 0, 0.22);
+                    left:0;
+                    top:0;
+                    opacity: 0;
+                    display: none;
+                }
+                img{
+                    width:200px;
+                    height:150px;
+                    transition: 0.5s ease-in-out;
+                }
+                &:hover{
+                    img{
+
+                        transform: scale(1.5);
+                    }
+                    &:after{
+                        opacity:1;
+                        display: block;
+                    }
+                }
+            }
+            .title{
+                text-align:center;
+                color:$primary;
+                font-size:20px;
+                justify-content: center;
+                padding-top:10px;
+            }
+            &:hover{
+                box-shadow:0 10px 20px darkgray;
+            }
+        }
+    }
+}
+
+.modal{
+    display:none;
+    opacity:0;
+}

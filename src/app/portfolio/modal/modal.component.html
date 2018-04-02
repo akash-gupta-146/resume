@@ -1,3 +1,26 @@
-<p>
-  modal works!
-</p>
+<div class="modal" *ngIf="portfolio">
+  <div class="modal-body" (click)="closeModal()">
+    <h3>{{ portfolio.title }}</h3>
+    <i class="fas fa-times-circle close"></i>
+    <div class="content">
+        <img [src]="portfolio.image">
+        <div class="details">
+          <div class="info">
+            <div>
+                <label>Date: </label>{{ portfolio.date }}
+            </div>
+            <div>
+                <label>Category: </label>{{ portfolio.category }}
+            </div>  
+            <div>
+                <label>Client: </label>{{ portfolio.client }}
+            </div>   
+           <a [href]="portfolio.link">Live Demo</a>
+          </div>
+          <div class="description">
+            {{ portfolio.description }}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

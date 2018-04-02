@@ -1,0 +1,32 @@
+<app-title [title]='"Portfolios"'></app-title>
+<div class="gallary">
+  <div class="navigator" *ngIf="categories">
+    <ul>
+      <li (click)="setCategory('all')" [class.active]="currentCategory == 'all'">
+        All
+      </li>
+      <li *ngFor="let cat of categories" (click)="setCategory(cat)" [class.active]="currentCategory == cat">
+        {{ cat }}
+      </li>
+    </ul>
+  </div>
+  <div class="selector" *ngIf="portfolios">
+    <ng-container  *ngFor="let portfolio of portfolios">
+    <div class="item" *ngIf="portfolio.category == currentCategory || currentCategory == 'all'">
+      <div>
+          <div class="img" (click)="openModal(portfolio)">
+              <img [src]="portfolio.image">
+          </div>
+          
+          <div class="title">
+          {{ portfolio.title }}
+            </div>
+        </div>
+      </div>
+    </ng-container>
+
+
+  </div>
+</div>
+
+<app-modal [portfolio]="currentPortfolio" class="modal"></app-modal>

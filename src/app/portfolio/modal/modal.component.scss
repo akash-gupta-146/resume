@@ -1,0 +1,89 @@
+@import "../../../sass/_variables.scss";
+
+.modal{
+    // display: none;
+    // opacity:0;
+    transition: 0.5s;
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0px;
+    left:0px;
+    .modal-body{
+        position: absolute;
+        padding:50px 30px 30px 30px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width:50%;
+        height:500px;
+        background:white;
+        animation:dropDown 0.7s ease;
+        .close{
+          position: absolute;
+          right:20px;
+          top:20px;
+          font-size: 20px;
+          color:$primary;
+          &:hover{
+              color:$secondary;
+          }
+        }
+        h3{
+            color:$primary;
+        }
+        .content{
+            display: flex;
+            img{
+                max-width:60%;
+                max-height:450px;
+                padding:10px 5px 10px 0;
+            }
+            .details{
+                color:gray;
+                width:40%;
+                padding:10px 0 10px 5px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                line-height: 25px;
+                font-size: 15px;
+                .info{
+                    a{
+                        padding:10px 30px;
+                        background:$secondary;
+                        color:white;
+                       position: relative;
+                       top:10px;
+                        box-shadow:0 3px 10px lightgray;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        transition: 0.4s;
+                        &:hover{
+                            background:darken($secondary,10);
+                            box-shadow:0 5px 15px darkgray;
+                        }
+                    }
+                }
+                label{
+                    font-weight: bold;
+                }
+                .description{
+                    line-height:20px;
+                    overflow: scroll;
+                    max-height: 330px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes dropDown{
+    from{
+        top:-30%;
+    }
+    to{
+        top:50%;
+    }
+}

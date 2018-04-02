@@ -1,4 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+interface Portfolio{
+  title: string;
+  image:string;
+  date:string;
+  category:string;
+  client:string;
+  link:string;
+  description:string;
+}
 
 @Component({
   selector: 'app-modal',
@@ -7,9 +17,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  @Input() portfolio:Portfolio;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  closeModal(){
+    var a:any;
+    a = document.getElementsByClassName('modal');
+    a[0].style.display = 'none';
+    a[0].style.opacity = '0';
   }
 
 }
