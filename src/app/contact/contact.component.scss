@@ -1,0 +1,99 @@
+@import "../../sass/_variables.scss";
+.contact {
+  display: flex;
+  margin: 30px 10%;
+  .contact-details {
+    width: 40%;
+    background: $primary;
+    text-align: center;
+    padding: 20px;
+    color: $primaryText;
+    .item {
+      i {
+        font-size: 30px;
+        margin: 20px;
+      }
+    }
+  }
+  .contact-me {
+    background:white;
+    margin: 0 20px;
+    width: 60%;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    .item {
+      position: relative;
+      margin-bottom: 50px;
+      input, textarea {
+        width: 100%;
+        height: 30px;
+        border: 0px;
+        border-bottom: 1px solid lightgray;
+        background: transparent;
+        font-size: 16px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      textarea{
+        height:90px !important;
+    }
+      label {
+        position: absolute;
+        top: 0px;
+        font-size: 18px;
+        left: 15px;
+        cursor: text;
+        transition: .2s ease-out;
+        color: gray;
+      }
+    }
+  }
+}
+
+input:focus~label,
+textarea:focus~label,
+input:not(:placeholder-shown)~label,
+textarea:not(:placeholder-shown)~label {
+  font-size: 12px !important;
+  top: -20px !important;
+  color: $secondary !important;
+  font-weight: bold;
+}
+
+input:focus,
+textarea:focus,
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+  border-bottom-color: $secondary !important;
+  font-size: 16px !important;
+}
+
+::placeholder {
+  color: transparent;
+}
+a{
+    padding:10px 30px;
+    background:$secondary;
+    color:white;
+    margin:0 10px;
+    box-shadow:0 3px 10px lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.4s;
+    float:right;
+    &:hover{
+        background:darken($secondary,10);
+        box-shadow:0 0px 15px darkgray;
+    }
+    &:active{
+        box-shadow:0 5px 15px darkgray;
+    }
+}
+
+.map-card{
+    .map{
+        width:100%;
+        height:400px;
+    }
+}
