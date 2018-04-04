@@ -16,6 +16,7 @@ import { TitleComponent } from './title/title.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ModalComponent } from './portfolio/modal/modal.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCd29pcYo9q147sDlltlnWv25e7qABqk8s",
@@ -39,7 +40,8 @@ var firebaseConfig = {
     TitleComponent,
     PortfolioComponent,
     ModalComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
