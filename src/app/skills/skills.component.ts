@@ -24,7 +24,7 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     this.getSkills();
-
+    window.addEventListener('scroll',this.setAnimations);
   }
 
   getSkills(){
@@ -33,6 +33,20 @@ export class SkillsComponent implements OnInit {
     this.receivedSkills.subscribe(response => {
       this.skills = response;
     });
+  }
+
+  setAnimations(){
+    var box:any = document.getElementsByClassName('delay-animation');
+    for(var i=0; i<box.length;i++){
+      var boxPos = box[i].offsetTop;
+      var cursorPos = window.scrollY;
+      if(cursorPos >= boxPos - 800  ){
+        box[i].classList.add('slideUp');
+      }
+      if(cursorPos > boxPos + 800 ){
+        // box[i].classList.remove('animate');
+      }
+    }
   }
 
 }

@@ -27,19 +27,7 @@ export class ProjectsComponent implements OnInit {
 
 
   ngOnInit() {
-    window.addEventListener('scroll',this.setAnimations);
     this.getProjects();
-  }
-
-  setAnimations(){
-    var box:any = document.getElementsByClassName('box-area');
-    for(var i=0; i<box.length; i++){
-      var boxPos = box[i].offsetTop;
-      var cursorPos = window.scrollY;
-      if(cursorPos+1096 >= boxPos ){
-        box[i].classList.add('animate');
-      }
-    }
   }
 
   getProjects(){
@@ -49,6 +37,5 @@ export class ProjectsComponent implements OnInit {
       this.projects = response;
     })
   }
-
 
 }

@@ -1,6 +1,6 @@
-<app-title [title]='"Portfolios"'></app-title>
-<div class="gallary">
-  <div class="navigator" *ngIf="categories">
+<app-title [title]='"Portfolios"'  *ngIf="portfolios"></app-title>
+<div class="gallary" *ngIf="categories && portfolios">
+  <div class="navigator">
     <ul>
       <li (click)="setCategory('all')" [class.active]="currentCategory == 'all'">
         All
@@ -11,8 +11,9 @@
     </ul>
   </div>
   <div class="selector" *ngIf="portfolios">
+    <div></div>
     <ng-container  *ngFor="let portfolio of portfolios">
-    <div class="item" *ngIf="portfolio.category == currentCategory || currentCategory == 'all'">
+    <div class="item animate  delay-animation" *ngIf="portfolio.category == currentCategory || currentCategory == 'all'">
       <div>
           <div class="img" (click)="openModal(portfolio)">
               <img [src]="portfolio.image">
@@ -24,7 +25,7 @@
         </div>
       </div>
     </ng-container>
-
+    <div></div>
 
   </div>
 </div>

@@ -34,3 +34,13 @@
         color:$primaryText;
     }
 }
+@media (max-width:768px){
+    .services{
+        grid-template-columns: 100%;
+    }
+}
+@media (max-width:992px) and (min-width:769px){
+    .services{
+        grid-template-columns: 50% 50%; 
+    }
+}

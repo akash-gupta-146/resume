@@ -1,6 +1,7 @@
 @import '../../sass/_variables.scss';
 .boxes{    
     margin-top:40px;
+    padding:0 10%;
     .title{
         text-align:center;
         font-size:26px;
@@ -9,7 +10,6 @@
         text-transform:uppercase;
     }
     .container{
-        margin:0 10%;
         display:flex;
         .box{
             background:$primary;
@@ -57,11 +57,22 @@
         }
     }
 }
-// @keyframes graphValue{
-//     from{
-//         width:0;
-//     }
-//     to{
-//         width:initial;;
-//     }
-// }
+
+@media (max-width:850px){
+    .container{
+        flex-wrap:wrap;
+        .box{
+            margin:10px 20px !important;;
+            width:initial !important;
+        }
+    }
+}
+@media (max-width:768px){
+    .container{
+        flex-direction:column;
+        .box{
+            margin:10px 20px !important;;
+            width:initial !important;
+        }
+    }
+}

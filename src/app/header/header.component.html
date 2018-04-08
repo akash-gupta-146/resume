@@ -1,8 +1,16 @@
-<header>
-    <ul>
-        <li *ngFor="let tab of tabs">
-            {{ tab }}
-        </li>
-    </ul>
+
+<header *ngIf="tabs" id="header">
+
+    <div class="nav" id="nav">
+            <i class="fas fa-times collapse close" (click)="collapse('close')"></i>
+            <ul>
+                <li *ngFor="let tab of tabs">
+                    {{ tab }}
+                </li>
+            </ul>
+    </div>
+
 </header>
+<i class="fas fa-bars collapse open" (click)="collapse('open')" id="close"></i>
+
 <app-intro></app-intro>

@@ -1,5 +1,6 @@
 @import '../../../sass/_variables';
-.alternateBoxes{
+@media (min-width:769px){
+    .alternateBoxes{
     .title{
         text-align:center;
         font-size:26px;
@@ -12,10 +13,10 @@
         flex-wrap: wrap;
         justify-content: center;
         padding:0px;
-        .box-area{
+        .box{
             width:40%;
             position: relative;
-            .box{
+            .box-area{
                 box-shadow:0 3px 9px rgba(0, 0, 0, 0.21);
                 .header{
                     padding:20px 20px;
@@ -59,9 +60,9 @@
                 position: absolute;
             }
         }
-        .box-area:nth-child(odd){
+        .box:nth-child(odd){
             border-right:2px solid $secondary;
-            .box{
+            .box-area{
                 margin-right: 80px;
             }
             &:after{
@@ -74,8 +75,8 @@
                 border-left: 2em solid transparent;
             }
         }
-        .box-area:nth-child(even){
-            .box{
+        .box:nth-child(even){
+            .box-area{
                 margin-top:80px;
                 margin-left: 80px;
             }
@@ -87,6 +88,57 @@
                 left: -85px;
                 top: 0px;
                 border-right: 2em solid transparent;
+            }
+        }
+    }
+}
+}
+@media (max-width:768px){
+    .alternateBoxes{
+        .title{
+            text-align:center;
+            font-size:26px;
+            color:$primary;
+            margin:10px;
+            text-transform:uppercase;
+        }
+        .area{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            .box{
+                position: relative;
+                width: 100%;
+                .box-area{
+                    margin-bottom: 10px;
+                    box-shadow:0 3px 9px rgba(0, 0, 0, 0.21);
+                    .header{
+                        padding:20px 20px;
+                        background:$primary;
+                        color:$primaryText;
+                        display:flex;
+                        justify-content: space-between;
+                    }
+                    .body{
+                        padding:20px 20px;
+                        background:white;
+                        h4{
+                            margin:10px;
+                        }
+                        p{
+                            margin:5px 10px;
+                        }
+                        ul{
+                            margin:10px 10px 10px 25px;
+                            li{
+                                color:gray;
+                                font-weight: 100;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

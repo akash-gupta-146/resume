@@ -1,8 +1,8 @@
-<app-title [title]="'services'"></app-title>
+<app-title [title]="'services'"  *ngIf="services"></app-title>
 
 <div class="services" *ngIf="services">
 
-  <div class="box" *ngFor="let service of services">
+  <div class="box animate delay-animation" *ngFor="let service of services">
     <i [ngClass]="service.icon"></i>
     <h3>{{ service.title }}</h3>
     <p>

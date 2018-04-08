@@ -24,7 +24,7 @@
     }
     .selector{
         display:grid;
-        grid-template-columns: 320px 320px 320px 320px;
+        grid-template-columns:320px 320px 320px 320px;
         justify-content: center;
         .item{
             width:300px;
@@ -87,4 +87,14 @@
 .modal{
     display:none;
     opacity:0;
+}
+@media (max-width:768px){
+    .selector{
+        grid-template-columns: 320px !important;
+    }
+}
+@media (max-width:992px) and (min-width:769px){
+    .selector{
+        grid-template-columns: 320px 320px !important; 
+    }
 }

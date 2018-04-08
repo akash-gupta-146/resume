@@ -29,4 +29,16 @@ tabs:any;
     })
   }
 
+  collapse(a){
+    var sidebar = document.getElementById('nav');
+    if(a == 'close'){
+      sidebar.style.transform = 'translate(-300px)';
+      document.getElementById('close').style.display = 'block';
+    }
+    if(a == 'open'){
+      sidebar.style.transform = 'translate(0)';
+      document.getElementById('close').style.display = 'none';
+    }
+  }
+
 }
