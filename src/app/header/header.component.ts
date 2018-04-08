@@ -24,8 +24,8 @@ tabs:any;
   ngOnInit() {
     this.page = this.afs.collection('header');
     this.pages = this.page.valueChanges();
-    this.pages.subscribe ( element => {
-      this.tabs = element[0].pages;
+    this.pages.subscribe ( response => {
+      this.tabs = response
     })
   }
 

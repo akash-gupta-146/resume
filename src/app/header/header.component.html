@@ -5,7 +5,7 @@
             <i class="fas fa-times collapse close" (click)="collapse('close')"></i>
             <ul>
                 <li *ngFor="let tab of tabs">
-                    {{ tab }}
+                    <a [href]="'#'+tab.link">{{ tab.name }}</a>
                 </li>
             </ul>
     </div>

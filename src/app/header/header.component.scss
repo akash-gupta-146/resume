@@ -17,12 +17,15 @@
         list-style: none;
         margin-left: 50%;
         transform: translate(-50%);
-        li{
+        a{
+            display: list-item;
             padding:15px 40px;
             cursor: pointer;
             text-align:center;
             text-transform: capitalize;
             transition: background 0.4s;
+            text-decoration: none;
+            color:inherit;
             &:hover{
                 color:$primaryHighlightColor;
                 background:$primaryHighlightBackground;
@@ -62,12 +65,13 @@
             display:block;
             color:white;
             list-style: none;
-            li{
-                // padding:15px 40px;
+            a{
+                display: list-item;
                 cursor: pointer;
-                // text-align:center;
+                text-decoration:none;
                 text-transform: capitalize;
                 transition: background 0.4s;
+                color:inherit;
                 &:hover{
                     color:$primaryHighlightColor;
                     background:$primaryHighlightBackground;
