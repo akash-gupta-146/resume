@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { HeaderComponent } from '../header/header.component';
 
 interface Intro{
   name:string;
@@ -33,7 +34,9 @@ export class IntroComponent implements OnInit {
 
   testArray:any[] = [];
 
-  constructor(private afs: AngularFirestore) { }
+  constructor(private afs: AngularFirestore,
+              private headerService:HeaderComponent
+            ) { }
 
   ngOnInit() {
     this.getSummary();
@@ -58,6 +61,10 @@ export class IntroComponent implements OnInit {
       });
       // console.log(this.testArray);
     });
+  }
+
+  scrollTo(id){
+    this.headerService.scrollTo(id);
   }
 
 }

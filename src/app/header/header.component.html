@@ -1,14 +1,31 @@
-
 <header *ngIf="tabs" id="header">
 
-    <div class="nav" id="nav">
-            <i class="fas fa-times collapse close" (click)="collapse('close')"></i>
-            <ul>
-                <li *ngFor="let tab of tabs">
-                    <a [href]="'#'+tab.link">{{ tab.name }}</a>
-                </li>
-            </ul>
-    </div>
+  <div class="nav" id="nav">
+    <i class="fas fa-times collapse close" (click)="collapse('close')"></i>
+    <ul>
+      <!-- <li *ngFor="let tab of tabs">
+        <a *ngIf="tab.name != 'home' && tab.name != 'contact' " (click)="scrollTo(tab.link)">{{ tab.name }}</a>
+      </li> -->
+      <li>
+        <a (click)="scrollTo('home')">Home</a>
+      </li>
+      <li>
+        <a (click)="scrollTo('projects')">Projects</a>
+      </li>
+      <li>
+        <a (click)="scrollTo('skills')">Skills</a>
+      </li>
+      <li>
+        <a (click)="scrollTo('services')">Services</a>
+      </li>
+      <li>
+        <a (click)="scrollTo('portfolio')">Portfolios</a>
+      </li>
+      <li>
+        <a (click)="scrollTo('contact')">Contact</a>
+      </li>
+    </ul>
+  </div>
 
 </header>
 <i class="fas fa-bars collapse open" (click)="collapse('open')" id="close"></i>
