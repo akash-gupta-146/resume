@@ -4,12 +4,15 @@ import { Observable } from 'rxjs/Observable';
 
 interface Portfolio{
   title: string;
-  image:string;
+  image:string[];
   date:string;
   category:string;
   client:string;
   link:string;
   description:string;
+  points: string[];
+  thumbnail:string;
+  video:string;
 }
 
 @Component({

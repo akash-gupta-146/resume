@@ -7,7 +7,7 @@
                     {{i.name}}
                 </div>
                 <div>
-                  <small *ngIf="i.date">{{ i.date }}</small>
+                  <small *ngIf="i.date">{{ i.date | date }} <span *ngIf="i.endDate">- {{ i.endDate | date }}</span></small>
                 </div>
               </div>
               <div class="body">

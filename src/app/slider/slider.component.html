@@ -1,0 +1,16 @@
+<div class="slider" *ngIf="images">
+  <div class="container">
+    <div class="images">
+      <img *ngFor="let img of images" id="slider" class="slide" [src]="img">
+    </div>
+    <div id="left" (click)="previous()">
+      <span> <i class="fas fa-angle-left"></i> </span>
+    </div>
+    <!-- <div id="nav-dots">
+      . . . .
+    </div> -->
+    <div id="right" (click)="next()">
+      <span><i class="fas fa-angle-right"></i></span>
+    </div>
+  </div>
+    </div>

@@ -1,5 +1,6 @@
 <div class="modal" *ngIf="portfolio">
-  <div class="modal-body" (click)="closeModal()">
+    <!-- <div class="modal" > -->
+  <!-- <div class="modal-body" (click)="closeModal()">
     <h3>{{ portfolio.title }}</h3>
     <i class="fas fa-times-circle close"></i>
     <div class="content">
@@ -22,5 +23,39 @@
           </div>
       </div>
     </div>
+  </div> -->
+
+  <div class="modal-body" >
+      <i class="fas fa-times close" (click)="closeModal()"></i>
+    <app-slider *ngIf="portfolioType == 'Play Video'" [images]="portfolio.image"></app-slider>
+    <div *ngIf="portfolioType == 'Slide Show'" class="video">
+      <video *ngIf="portfolio.video" controls>
+          <source src="portfolio.video" type="video/mp4">
+      </video>
+        <!-- <iframe *ngIf="portfolio.video" [src]="portfolio.video" class="youtube-video" id="video" frameborder="0" allow="autoplay;" allowfullscreen></iframe> -->
+    </div>
+    <div class="label">
+        <h3>{{ portfolio.title }}</h3>
+        <div>
+            <a (click)="toggleType()">{{ portfolioType }}</a>
+            <a [href]="portfolio.link" *ngIf="portfolio.link">Live Demo</a>
+        </div>
+        
+    </div>
+    <div class="details">
+      <div>
+          <b>Category:</b> {{ portfolio.category }}
+          <div>
+            <b>Description:</b> {{ portfolio.description }}
+          </div>
+      </div>
+      <div *ngIf="portfolio.points">
+        <ul>
+          <li *ngFor="let i of portfolio.points"> {{ i }}</li>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
 </div>

@@ -16,7 +16,7 @@
     <div class="item animate  delay-animation" *ngIf="portfolio.category == currentCategory || currentCategory == 'all'">
       <div>
           <div class="img" (click)="openModal(portfolio)">
-              <img [src]="portfolio.image">
+              <img [src]="portfolio.thumbnail">
           </div>
           
           <div class="title">

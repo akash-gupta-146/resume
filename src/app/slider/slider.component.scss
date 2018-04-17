@@ -1,0 +1,67 @@
+@import '../../sass/_variables';
+.slider{
+    width:100%;
+    }
+    .slider .container{
+      display:block;
+      margin:auto;
+      width:80%;
+      height: -webkit-fill-available;
+      position:relative;
+      max-height:400px;
+    }
+    .slider .container .slide{
+      max-width:100%;
+      max-height:400px;
+      display:block;
+      margin:auto;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      transition:2s;
+      box-shadow: 0 0 0;
+    }
+    .slider  .nav{
+        position:relative;
+        width:100%;
+    }
+    #left,
+    #right{
+      position:absolute;
+      top:50%;
+      transform:translatey(-50%);
+      text-align:center;
+      cursor:pointer;
+      padding:30x;
+      font-size:30px;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      transition:0.2s;
+    }
+    #left span,
+    #right span{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+    #left:hover,
+    #right:hover{
+      color: $secondary;
+    }
+    #left{
+      left:-50px;
+    }
+    #right{
+      right:-50px;
+    }
+    #nav-dots{
+      position:absolute;
+      bottom:5px;
+      left:50%;
+      transform:translate(-50%);
+      font-weight:bold;
+      font-size:50px;
+    }
