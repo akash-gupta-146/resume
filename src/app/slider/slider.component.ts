@@ -18,7 +18,7 @@ export class SliderComponent implements OnInit {
   slider:any = document.getElementById('slider')
   slides:any = document.getElementsByClassName('slide');
   slideIndex:any = 0;
-  
+  loaded:any;
 
 
   
