@@ -11,6 +11,7 @@
     }
     .container{
         display:flex;
+        justify-content: center;
         .box{
             background:$primary;
             width:30%;

@@ -27,17 +27,16 @@
 
   <div class="modal-body" >
       <i class="fas fa-times close" (click)="closeModal()"></i>
-    <app-slider *ngIf="portfolioType == 'Play Video'" [images]="portfolio.image"></app-slider>
+      <app-slider *ngIf="portfolioType == 'Play Video'" [images]="portfolio.image"></app-slider>
     <div *ngIf="portfolioType == 'Slide Show'" class="video">
-      <video *ngIf="portfolio.video" controls>
-          <source src="portfolio.video" type="video/mp4">
-      </video>
-        <!-- <iframe *ngIf="portfolio.video" [src]="portfolio.video" class="youtube-video" id="video" frameborder="0" allow="autoplay;" allowfullscreen></iframe> -->
+      <iframe (load)="loaded = true" class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/glEiPXAYE-U?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+      <app-spinner *ngIf="!loaded"></app-spinner>
     </div>
     <div class="label">
         <h3>{{ portfolio.title }}</h3>
         <div>
-            <a (click)="toggleType()">{{ portfolioType }}</a>
+          <!-- button to switch video and slideshow -->
+            <!-- <a (click)="toggleType()">{{ portfolioType }}</a> -->
             <a [href]="portfolio.link" *ngIf="portfolio.link">Live Demo</a>
         </div>
         
@@ -45,7 +44,7 @@
     <div class="details">
       <div>
           <b>Category:</b> {{ portfolio.category }}
-          <div>
+          <div *ngIf="portfolio.description ">
             <b>Description:</b> {{ portfolio.description }}
           </div>
       </div>
@@ -56,6 +55,5 @@
       </div>
 
     </div>
-
   </div>
 </div>

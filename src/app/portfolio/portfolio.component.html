@@ -11,9 +11,9 @@
     </ul>
   </div>
   <div class="selector" *ngIf="portfolios">
-    <div></div>
+    <!-- <div></div> -->
     <ng-container  *ngFor="let portfolio of portfolios">
-    <div class="item animate  delay-animation" *ngIf="portfolio.category == currentCategory || currentCategory == 'all'">
+    <div class="item animate delay-animation" *ngIf="portfolio.category == currentCategory || currentCategory == 'all'">
       <div>
           <div class="img" (click)="openModal(portfolio)">
               <img [src]="portfolio.thumbnail">

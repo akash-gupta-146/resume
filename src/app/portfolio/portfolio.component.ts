@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { SkillsComponent } from '../skills/skills.component';
 
 interface Portfolio{
   title: string;
@@ -31,7 +32,7 @@ export class PortfolioComponent implements OnInit {
   categories: string[] = [];
   currentCategory:string;
 
-  constructor(private afs:AngularFirestore) { }
+  constructor(private afs:AngularFirestore, private animate:SkillsComponent) { }
 
   ngOnInit() {
     this.getPortfolio();
@@ -43,12 +44,11 @@ export class PortfolioComponent implements OnInit {
     var a:any = document.getElementsByClassName('modal');
       a[0].style.display = 'block';
       a[0].style.opacity = '1';
-    
-
   }
   
   setCategory(cat){
     this.currentCategory = cat;
+    setTimeout(this.animate.setAnimations,10);
   }
 
   checkInArray(category){
@@ -65,6 +65,7 @@ export class PortfolioComponent implements OnInit {
     this.receivedPortfolio = this.portfolioCollection.valueChanges();
     this.receivedPortfolio.subscribe( response =>{
       this.portfolios = response;
+      console.log(response);
       for(let a of response){
         let count:number = 0;
         if(a.category){

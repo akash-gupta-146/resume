@@ -18,6 +18,7 @@ import { ModalComponent } from './portfolio/modal/modal.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCd29pcYo9q147sDlltlnWv25e7qABqk8s",
@@ -43,14 +44,15 @@ var firebaseConfig = {
     ModalComponent,
     ContactComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,                 
   ],
-  providers: [HeaderComponent],
+  providers: [HeaderComponent,SkillsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,8 @@
-<div class="slider" *ngIf="images">
+<div class="slider">
   <div class="container">
     <div class="images">
-      <img *ngFor="let img of images" id="slider" class="slide" [src]="img">
+      <img *ngFor="let img of imgs;let i = index;" id="slider" class="slide" [src]="img" [style.opacity]="i?0:1" (load)="loaded = true" download target="_blank">
+      <app-spinner *ngIf="!loaded"></app-spinner>
     </div>
     <div id="left" (click)="previous()">
       <span> <i class="fas fa-angle-left"></i> </span>

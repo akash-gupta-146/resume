@@ -9,7 +9,11 @@ import { Observable } from 'rxjs/Observable';
 export class SliderComponent implements OnInit {
 
 
-  @Input() images:string[];
+  imgs: string[];
+  @Input() set  images(imgs:string[]){
+    this.imgs = imgs;
+  }
+  
   
   slider:any = document.getElementById('slider')
   slides:any = document.getElementsByClassName('slide');
@@ -21,7 +25,7 @@ export class SliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.showSlide();
+    // this.showSlide();
     setTimeout(()=>{    //<<<---    using ()=> syntax
       this.next()
     },3000);

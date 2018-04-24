@@ -13,7 +13,7 @@
         {{ summary.summary }}
     </div>
     <div class="actionButtons">
-        <a>Download CV</a>
+        <a [href]="summary.resume" download target="_blank">Download CV</a>
         <a (click)="scrollTo('contact')">Contact Me</a>
     </div>
     </div>

@@ -111,3 +111,58 @@ body{
     opacity:0;
 }
 // end of animations
+
+
+// /spinner
+div[wrap]{
+    position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  p{
+    text-align:center;
+    font-size:20px;
+    color:green;
+    animation:shadow 4s linear infinite;
+    margin-top:20px;
+  }
+  .starter{
+    background-image:url(http://localhost:5000/assets/akash-pic.jpg);
+    width:200px;
+    height:200px;
+    background-size:cover;
+    border-radius:50%;
+    border:3px solid white;
+    box-shadow:0 3px 13px rgba(0,0,0,0.7);
+    animation:spinn 2s linear infinite;
+  /*   transform-origin:center; */
+  }
+}
+
+
+@keyframes spinn{
+  0%{
+    transform:rotate(0deg);
+  }
+  35%{
+    transform:rotate(-10deg);
+  }
+  70%{
+    transform:rotate(10deg);
+  }
+  100%{
+    transform:rotate(0deg);
+  }
+  
+}
+
+@keyframes shadow{
+  0% ,100%{
+    text-shadow:0 0 0 rgba(0,0,0,0);
+  }
+    50%{
+    text-shadow:0 0 7px rgba(0,0,0,04);
+  }
+}
+
+// end of spinner

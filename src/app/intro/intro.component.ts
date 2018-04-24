@@ -9,12 +9,14 @@ interface Intro{
   name:string;
   title:string;
   summary:string;
+  resume:string;
 }
 
 interface SocialLinks{
   name:string;
   href:string;
   icon:string;
+  resume:string;
 }
 
 @Component({
