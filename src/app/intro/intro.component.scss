@@ -79,3 +79,42 @@
        flex-direction: column;
     }
 }
+
+
+.scroll-icon{
+    position:relative;
+    left:50%;
+    transform:translate(-50%);
+    width:20px;
+    height:30px;
+    border:1px solid $secondary;
+    border-radius:25px;
+    &:before{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        content:'';
+        height:5px;
+        width:5px;
+        border-radius:50%;
+        background:$secondary;
+        top:5px;
+        animation:scroll 1s ease-in-out infinite;
+    }
+    + div{
+        text-align:center;
+        margin-top:5px;
+        color:$secondary;
+        font-weight: bold;
+      }
+  }
+
+  @keyframes scroll{
+    0%{
+      top:5px;
+    }
+    100%{
+      top:25px;
+      opacity:0;
+    }
+  }
